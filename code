@@ -1,0 +1,38 @@
+//upper triangle matrix
+#include<stdio.h>
+int main()
+{
+    int a[40][40],r,c,f=0,i=0,j=0;
+    printf("enter row and column");
+    scanf("%d%d",&r,&c);
+    printf("enter the elements");
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+        
+    }
+    
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            if(i>j)
+            {
+                if(a[i][j]!=0)
+                {
+                    f=1;
+                    break;
+                }
+            }
+        }
+    }
+    
+    if(f==0)
+    printf("upper diagonal");
+    else
+    printf("not a upper triangular");
+	return 0;
+}
